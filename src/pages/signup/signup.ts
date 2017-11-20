@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AlertController, Loading, LoadingController, NavController, NavParams } from 'ionic-angular';
@@ -61,7 +62,7 @@ export class SignupPage {
             this.userService.create(formUser, uuid)
               .then(() => {
                 console.log('Usuario cadastrado!');
-                this.navCtrl.setRoot('HomePage');
+                this.navCtrl.setRoot(HomePage);
                 loading.dismiss();
               }).catch((error: any) => {
                 console.log(error);
